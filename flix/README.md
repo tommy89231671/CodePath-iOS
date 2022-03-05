@@ -13,7 +13,7 @@
 ### App Walkthrough GIF
 
 
-![](https://i.imgur.com/j3MzJOG.gif)
+![](https://i.imgur.com/YoOggva.gif)
 
 
 ### Notes
@@ -38,7 +38,7 @@ Describe any challenges encountered while building the app.
 ### App Walkthrough GIF
 
 
-![](https://i.imgur.com/YoOggva.gif)
+![](https://i.imgur.com/0B5et5E.gif)
 
 
 ### Notes
