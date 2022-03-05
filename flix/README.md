@@ -13,7 +13,7 @@
 ### App Walkthrough GIF
 
 
-![](https://i.imgur.com/j3MzJOG.gif)
+![](https://i.imgur.com/YoOggva.gif)
 
 
 ### Notes
