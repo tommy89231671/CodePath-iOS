@@ -41,6 +41,16 @@ class MovieGridViewController: UIViewController,UICollectionViewDataSource,UICol
         }
         task.resume()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        //find the selected movie
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let movie = movies[indexPath.item]
+        // pass the selected movie to the details view controller
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+//        CollectionView.deselectRow(at: indexPath, animated: true)
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath ) as! MovieGridCell

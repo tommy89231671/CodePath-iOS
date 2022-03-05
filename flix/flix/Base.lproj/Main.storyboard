@@ -214,6 +214,7 @@
                                         <size key="customSize" width="193" height="262"/>
                                         <connections>
                                             <outlet property="posterView" destination="H4W-Mk-Omp" id="WqK-QP-gTM"/>
+                                            <segue destination="bXN-bH-Moj" kind="show" id="bnh-6l-paq"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -251,6 +252,9 @@
             <point key="canvasLocation" x="3556.521739130435" y="-614.0625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bnh-6l-paq"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>
