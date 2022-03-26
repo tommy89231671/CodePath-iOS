@@ -16,7 +16,7 @@ The following **required** functionality is completed:
 
 The following **bonus** features are implemented:
 
-- [ ] User can pull to refresh. (1pt)
+- [x] User can pull to refresh. (1pt)
 - [ ] User can load past posts infinitely. (2pts)
 
 ## Video Walkthrough
@@ -30,5 +30,11 @@ Here's a walkthrough of implemented user stories:
 <br></br>
 
 ![](https://i.imgur.com/8Y6ytVk.gif)
+
+<br></br>
+![](https://i.imgur.com/yKKBBqR.gif)
+
+<br></br>
+![](https://i.imgur.com/eqzoBkI.gif)
 
 

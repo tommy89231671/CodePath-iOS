@@ -14,14 +14,17 @@ class FeedViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     @IBOutlet weak var tableView: UITableView!
     var posts = [PFObject]()
+    let myRefreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
+    
+        self.myRefreshControl.addTarget(self, action: #selector(load_posts), for: .valueChanged)
+        tableView.refreshControl = myRefreshControl
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    
+    @objc func load_posts(){
         let query = PFQuery(className:"Posts")
         query.includeKey("author")
         query.limit = 20
@@ -32,6 +35,11 @@ class FeedViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 self.tableView.reloadData()
             }
         }
+        self.myRefreshControl.endRefreshing()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        load_posts()
 
     }
     
@@ -40,7 +48,7 @@ class FeedViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let post = posts[indexPath.row]
         let user = post["author"] as! PFUser
         cell.usernameLabel.text = user.username
-        cell.captionLabel.text = post["caption"] as! String
+        cell.captionLabel.text = post["caption"] as? String
         
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
